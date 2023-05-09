@@ -1,0 +1,108 @@
+/* add gift */
+.formStyle{
+    justify-content: center;
+    border: 2px groove rgba(74, 82, 112, 0.516);
+  
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+   }
+   .create{
+       display: flex;
+       justify-content:center;
+   }
+   
+   input{
+     height: 35px;
+     padding:3px;
+     border:0px;
+   }
+   .subButton{
+   justify-content: space-around;
+   margin-top: 20px;
+   background-color: rgb(202, 29, 17);
+   color:white;
+   height:35px;
+   width:90px;
+   border:2px solid rgba(95, 158, 160, 0.368);
+   border-radius: 1rem;
+   align-items: center;
+   margin-left: 60px;
+   }
+   /* h2{
+       text-shadow:0px 5px 10px #818165;
+       align-items: center;
+       text-align: center;
+       padding: 20px;
+       font-size: 3rem;
+   } */
+
+/* body {
+  font-family: Oxygen, sans-serif;
+  margin: 2rem;
+} */
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
+  gap: 5rem;
+  justify-content: center;
+}
+
+.card {
+  overflow: hidden;
+  box-shadow: 0 2px 20px grey;
+  border-radius: radius;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 200ms ease-in;
+}
+  .card__image {
+    height: 12rem;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .card__title {
+    float:left;
+    width: 80%;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .card__btn1 {
+    float:left;
+    width: 30%;
+    height: 35px;
+    padding: 1rem;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 1rem;
+    padding: 2px;
+    border: 2px solid rgba(95, 94, 94, 0.769);
+    background: transparent;
+    color: rgba(75, 74, 74, 0.747);
+    border-radius: 1rem;
+    transition:  200ms ease-in, color 200ms ease-in;
+  }
+
+  .card__description {
+    float:left;
+    width:100%;
+    padding: 0 1rem;
+  }
+
+  .card__btn {
+     padding: 1rem;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 1rem;
+    border: 2px solid rgb(55, 142, 189);
+    background: transparent;
+    color: rgb(145, 145, 208);
+    border-radius:1rem;
+    transition:  200ms ease-in, color 200ms ease-in;
+  }  

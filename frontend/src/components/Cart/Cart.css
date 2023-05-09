@@ -1,0 +1,113 @@
+.cart-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    font-size: 20px;
+  }
+  
+  .cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+  }
+  
+  .cart-table th,
+  .cart-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .cart-table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+  }
+  
+  .cart-table td.quantity {
+    display: flex;
+    align-items: center;
+  }
+  
+  .cart-table td.quantity button {
+    font-size: 18px;
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    border-radius: 50%;
+    border: none;
+    background-color: #f5f5f5;
+    color: #555;
+    cursor: pointer;
+  }
+  
+  .cart-table td.quantity button:hover {
+    background-color: #ddd;
+  }
+  
+  .cart-table td.actions button {
+    font-size: 16px;
+    margin-right: 5px;
+    padding: 8px 16px;
+    border: none;
+    background-color: #f5f5f5;
+    color: #555;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .cart-table td.actions button:hover {
+    background-color: #ddd;
+  }
+  
+  .cart-total {
+    display: block;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .cart-total span {
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .cart-clear {
+    font-size: 16px;
+    padding: 8px 16px;
+    border: none;
+    background-color: #cb3535;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    border-radius: 1rem;
+    
+    display: block;
+    margin: auto;
+    justify-content: center;
+    font-weight: bold;
+  }
+  
+  .cart-clear:hover {
+    background-color: #9c9c8d;
+    color:rgb(231, 227, 227);
+    height: 5rem;
+    width: 14rem;
+    font-weight: bold;
+  }
+  
+  .inc_butt{
+    width: 3rem;
+    background-color: red;
+    border:groove ;
+    border-radius: 5px;
+    color:white;
+  }
+  .dec_butt{
+    width: 3rem;
+    background-color:green;
+    border:groove ;
+    border-radius: 5px;
+    color:white;
+  }

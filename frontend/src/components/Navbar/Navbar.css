@@ -1,0 +1,24 @@
+#navbar #nav-background {
+  background-image: url("../../asserts/navbar5.png");
+  min-height: 60px;
+  color: aquamarine;
+}
+
+#navbar #nav-name {
+  padding-left: 20px;
+  color: #fca311;
+  font-weight: 1000;
+  font-size: larger;
+  font-style: italic;
+}
+
+#navbar #nav-content {
+  color: #d6d6d6;
+  padding-left: 20px;
+
+}
+
+#navbar div #nav-content:hover {
+  color: aqua;
+  background-color: #fca311;
+}
