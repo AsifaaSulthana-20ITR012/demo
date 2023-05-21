@@ -5,8 +5,7 @@ import axios from "axios";
 import "./login.css";
 
 function Signuppage() {
-    // React States
-    // const [errorMessages, setErrorMessages] = useState({});
+  
     const [item, setItem] = useState({
         name: '',
         uname: '',

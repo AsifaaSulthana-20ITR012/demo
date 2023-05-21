@@ -31,14 +31,14 @@
     }
   }
   
-  * {
+  #contactpage {
     border: 0;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
-  body {
+  body #contactpage{
     font-family: var(--font);
     font-weight: var(--fontOrigin);
     font-size: 1rem;
@@ -48,7 +48,7 @@
     font-smooth: subpixel-antialiased;
   }
   
-  .wrapper1 {
+  #contactpage .wrapper1 {
     display: grid;
     grid-template-columns: repeat( auto-fit, 1fr );
     grid-template-rows: auto;
@@ -60,16 +60,16 @@
     padding-top: 20px;
   }
   
-  .menu {
+  #contactpage .menu {
     grid-area: menu;
     align-self: end;
   }
   
-  .menu__list {
+  #contactpage .menu__list {
     text-align: center;
   }
   
-  .menu__item {
+  #contactpage .menu__item {
     position: relative;
     display: inline-block;
     padding: 10px 20px;
@@ -82,7 +82,7 @@
     transition: all var(--speed) ease;
   }
   
-  .menu__item::after {
+  #contactpage .menu__item::after {
     content: "";
     display: block;
     width: 0;
@@ -93,18 +93,18 @@
     transition: all var(--speed) ease;
   }
   
-  .menu__item:hover {
+  #contactpage .menu__item:hover {
     color: rgba(150, 150, 255, 1);
   }
-  .menu__item.active {
+  #contactpage .menu__item.active {
     color: rgba(100, 100, 250, 1);
   }
   
-  .menu__item.active::after {
+  #contactpage .menu__item.active::after {
     width: 100%;
   }
   
-  .card {
+  #contactpage .card {
     position: relative;
     display: flex;
     justify-content:space-between ;
@@ -125,7 +125,7 @@
     transition: all var(--speed) ease;
   }
   
-  .card:hover {
+  #contactpage .card:hover {
     box-shadow: 0 40px 130px rgba(0, 0, 0, 0.6);
     -webkit-transform: scale(1.1, 1.1);
     transform: scale(1.1, 1.1);
@@ -146,16 +146,16 @@
     transition: all var(--speed) ease;
   }
    */
-  .card__save:focus {
+   #contactpage .card__save:focus {
     outline: 0;
     background-color: rgba(255, 255, 255, 0);
   }
   
-  .card:hover .card__save {
+  #contactpage .card:hover .card__save {
     opacity: 0.6;
   }
   
-  .card__save i {
+  #contactpage .card__save i {
     font-size: 18px;
     color: rgba(255, 255, 255, 0.6);
     cursor: pointer;
@@ -163,21 +163,21 @@
     transition: all var(--speed) ease;
   }
   
-  .card__save:hover i {
+  #contactpage .card__save:hover i {
     color: rgba(255, 255, 255, 0.8);
   }
   
-  .card__save:active,
-  .card__save.active {
+  #contactpage .card__save:active,
+  #contactpage .card__save.active {
     opacity: 1 !important;
   }
   
-  .card__save:active i,
-  .card__save.active i {
+  #contactpage .card__save:active i,
+  #contactpage .card__save.active i {
     color: white;
   }
   
-  .card__image {
+  #contactpage .card__image {
     position: absolute;
     top: 0;
     left: 0;
@@ -190,7 +190,7 @@
     background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5));
   }
   
-  .card__image img {
+  #contactpage .card__image img {
     -webkit-transform: scale(1.3, 1.3);
     transform: scale(1.3, 1.3);
     display: block;
@@ -207,32 +207,32 @@
     animation-iteration-count: infinite;
   }
   
-  .card:hover .card__image img {
+  #contactpage .card:hover .card__image img {
     -webkit-transform: scale(1, 1);
     transform: scale(1, 1);
     opacity: 0.5;
   }
   
-  .card__header {
+  #contactpage.card__header {
     display: grid;
     width: 100%;
     height: 200px;
   }
   
-  .card__profile {
+  #contactpage .card__profile {
     align-self: center;
     justify-self: center;
     display: block;
     overflow: hidden;
     width: 200px;
     height: 200px;
-    margin-top: 20px;
+    margin: 20px;
     max-width: 100%;
     max-height: 100%;
     border-radius:20%;
   }
   
-  .card__profile iframe {
+  #contactpage .card__profile iframe {
     display: block;
     width: 100%;
     height: 100%;
@@ -240,17 +240,17 @@
     object-position: 50% 50%;
   }
   
-  .card:hover .card__profile iframe {
+  #contactpage .card:hover .card__profile iframe {
     -webkit-transform: scale(1, 1)  translateZ(0);
     transform: scale(1, 1)  translateZ(0);
   }
   
-  .card__body {
+  #contactpage .card__body {
     display: grid;
     padding: 0 20px;
   }
   
-  .card__name {
+  #contactpage .card__name {
     align-self: center;
     justify-self: center;
     margin-bottom: 2px;
@@ -268,13 +268,13 @@
     transition: all var(--speed) ease;
   }
   
-  .card:hover .card__name {
+  #contactpage .card:hover .card__name {
     background: -webkit-linear-gradient(white, #c1c1c1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   
-  .card__job {
+  #contactpage .card__job {
     align-self: center;
     justify-self: center;
     display: inline-block;
@@ -287,17 +287,17 @@
     transition: all var(--speed) ease;
   }
   
-  .card:hover .card__job {
+  #contactpage .card:hover .card__job {
     color: rgb(27, 150, 144);
     display: none;
   }
   
-  .card__bio {
+  #contactpage .card__bio {
     position: relative;
     -webkit-transform: translateY(30%);
     transform: translateY(30%);
     display: block;
-    margin: 22px 0 16px 0;
+    /* margin: 22px 0 16px 0; */
     font-size: var(--fontMedium);
     font-weight: var(--fontLight);
     /*text-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.35);*/
@@ -307,13 +307,13 @@
     transition: all var(--speed) ease;
   }
   
-  .card:hover .card__bio {
+  #contactpage .card:hover .card__bio {
     -webkit-transform: translateY(0);
     transform: translateY(0);
     opacity: 1;
   }
   
-  .card__footer {
+  #contactpage .card__footer {
     position: relative;
     -webkit-transform: translateY(60%);
     transform: translateY(60%);
@@ -326,13 +326,13 @@
     transition: all var(--speed) ease;
   }
   
-  .card:hover .card__footer {
+  #contactpage .card:hover .card__footer {
     -webkit-transform: translateY(0);
     transform: translateY(0);
     opacity: 1;
   }
   
-  .card__date {
+  #contactpage .card__date {
     grid-area: date;
     display: inline-block;
     align-self: left;
@@ -345,30 +345,30 @@
   }
   
   /* MODIFIERS */
-  .card[data-effect="blur"]:hover .card__image img {
+  #contactpage .card[data-effect="blur"]:hover .card__image img {
     -webkit-filter: blur(3px);
     filter: blur(3px);
   }
   
-  .card[data-effect="blur"] .card__image img {
+  #contactpage .card[data-effect="blur"] .card__image img {
     animation-name: blur;
   }
   
-  .card[data-effect="color"]:hover {
+  #contactpage .card[data-effect="color"]:hover {
     -webkit-transform: scale(1, 1);
     transform: scale(1, 1);
     box-shadow: 0 40px 260px rgba(255, 0, 0, 0.1), 0 40px 130px rgba(250, 100, 100, 0.2), -80px -40px 230px rgba(0, 200, 250, 0.15), 80px 40px 230px rgba(120, 120, 255, 0.15);
   }
   
-  .card[data-effect="color"] .card__image {
+  #contactpage .card[data-effect="color"] .card__image {
     background: linear-gradient(to bottom, rgba(20, 20, 100, 1), rgba(255, 100, 100, 0.5))
   }
   
-  .card[data-effect="color"]:hover .card__image img {
+  #contactpage .card[data-effect="color"]:hover .card__image img {
     opacity: 0.8;
   }
   
-  .card[data-effect="color"]:hover .card__profile img {
+  #contactpage .card[data-effect="color"]:hover .card__profile img {
     -webkit-filter: grayscale(50%) contrast(80%) brightness(1.6);
     filter: grayscale(50%) contrast(80%) brightness(1.6);
     mix-blend-mode: normal;
@@ -376,20 +376,20 @@
 
   /* responsive cards */
   @media screen {
-    .wrapper1 {
+    #contactpage .wrapper1 {
       width: 100%;
       display: block;
       margin-bottom: 20px;
     }
   }
   /* form style */
-  .contact-inputs{
+  #contactpage .contact-inputs{
     align-items: center;
     display: flex;
     flex-direction: column;
     gap: 3rem;
   }
-  .contact{
+  #contactpage .contact{
     grid-row: 2/3;
     grid-column: 2/3;
     margin: 0 auto;
@@ -405,18 +405,18 @@
     text-align: center;
     border-radius: 10px;
   }
-  .contact:hover{
+  #contactpage .contact:hover{
     border: 3px groove rgba(99, 166, 169, 0.742);
     width: 450px;
     height: 450px;
  
   }
-  input{
+  #contactpage input{
     height: 30px;
     border-radius: 5px;
     border: 2px outset rgba(147, 133, 133, 0.527);
   }
-   .Top_heading{
+   #contactpage .Top_heading{
      text-align: center;
      text-shadow: 5px 6px 7px ;
      font-size: bold;

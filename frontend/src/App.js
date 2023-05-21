@@ -11,18 +11,19 @@ import AddProduct from './components/Product/AddProduct';
 import Disp from './components/Product/Disp';
 import AddGift from './components/GiftVoucher/AddGift';
 import Main from './components/Admin/Main';
+import Payment from './components/Payment/Payment';
+
 import './App.css'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useThemeHook} from '../src/GlobalComponent/ThemeProvider'
 
 function App() {
-  const [theme] = useThemeHook();
+  
   return (
   <>
-   <main className={theme? 'bg-black': 'bg-light-2'} style={{ height: '100vh', overflowY: 'auto'}}>
+   
 
-  <Navbar/>
+  {/* <Navbar/> */}
   <Routes>
   <Route path='/' element={<Home/>}></Route>
   <Route path='/giftVoucher' element={<GiftVoucher/>}></Route>
@@ -35,8 +36,9 @@ function App() {
    <Route path='/Disp' element={<Disp/>}></Route>
    <Route path='/addGift' element={<AddGift/>}></Route>
    <Route path='/admin' element={<Main/>}></Route>
+   <Route path='/payment' element={<Payment/>}></Route>
   </Routes>
-  </main>
+
   </>
   );
 }

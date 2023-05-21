@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/Button';
 import Card from "react-bootstrap/Card";
 import { useNavigate } from 'react-router-dom';
 import "./giftVoucher.css";
+import TopNavBtn from "../TopNav/TopNav";
 
 function GiftVoucher () {
   const [data, setData] = useState([]);
@@ -50,10 +51,13 @@ function GiftVoucher () {
                   handleAddToCart={handleAddToCart}
                 />
               </div>
+
             </>
           })
         }
         </div>
+        <TopNavBtn/>
+
     </div>
   );
 }

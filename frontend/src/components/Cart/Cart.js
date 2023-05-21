@@ -1,5 +1,6 @@
 import React from 'react';
 import './Cart.css';
+import Payment from '../Payment/Payment'
 
 export default function Cart() {
   const [data, setData] = React.useState([]);
@@ -70,6 +71,8 @@ export default function Cart() {
       </table>
       <h2 className='cart-total'> Total: ₹{totalPrice.toFixed(2)}</h2>
       <button onClick={clearCart} className='cart-clear'>Clear Cart</button>
+      <br/>
+      <center> <Payment name={totalPrice.toFixed(2)} /></center> 
     </div>
   );
 }

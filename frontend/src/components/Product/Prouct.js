@@ -5,7 +5,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import Button from 'react-bootstrap/Button';
 import Card from "react-bootstrap/Card";
 import { useNavigate } from 'react-router-dom';
-// import './Product.css';
+
+
+import './Product.css';
 
 function Product() {
   const [data, setData] = useState([]);
@@ -64,6 +66,7 @@ function Product() {
           })
         }
         </div>
+           
     </div>
   );
 }
@@ -92,6 +95,7 @@ function Cards(props) {
           <Card.Body>
           
             <Card.Title className="card__title" >{props.title}</Card.Title>
+            <h6>{props.desc}</h6>
           
             <Button variant="secondary"> ₹{` ${props.price}`}/-</Button>
             <Button variant="danger" className="card__btn" value="remove"  onClick={() => props.handleAddToCart(props)} style={{ justifyContent: "end", textAlign: "center" }} key={props._id}>Order Now
@@ -100,6 +104,7 @@ function Cards(props) {
           </Card.Body>
         </Card>
         </div>
+    
     </>
   );
 }

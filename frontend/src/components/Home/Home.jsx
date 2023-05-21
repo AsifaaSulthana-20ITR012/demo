@@ -3,11 +3,8 @@ import React from 'react';
 import img1 from '../../images/homeimg1.jpg';
 import img2 from '../../images/homeimg2.jpg';
 import img3 from '../../images/homeimg3.jpg';
-
-
 const colors = [img1,img3,img2]
 const delay = 4500;
-
 function Slideshow() {
   const [index, setIndex] = React.useState(0);
   const timeoutRef = React.useRef(null);

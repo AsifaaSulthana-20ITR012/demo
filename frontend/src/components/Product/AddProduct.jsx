@@ -25,35 +25,48 @@ function AddProduct() {
 
     return (
         <>
-        <div><h2>Add a New Product</h2>
-            <div className="create">
+        <br/>
+        <br/>
+        <div><h2 style={{textAlign:"center",alignContent:"center"}}>Add a New Product</h2>
+        <br/>
+            <div className="create" >
             <br/>
-                <div className=" col-7 formStyle" >
+                <div className="col-6 formStyle" >
                     <div className="card-body">
                         <form onSubmit={handleFormSubmit} action="/admin" >
-                            <label className="form-label">Product Name:</label>
-                            <input type="text" required
+                            <label className="form-label" style={{float:'left',padding:"20px"}}>Product Name:
+                            <input type="text" required 
                                 onChange={e => setItem({ ...item, foodName: e.target.value })}
                             />
+                            </label>
+                            <label className="form-label" style={{float:'left',padding:"20px"}}>Product Price:
+                            <input type="text" placeholder='in Rupees' required 
+                                onChange={e => setItem({ ...item, price: e.target.value })}
+                            /></label>
+                        
                              <br/><br/>
-                            <label className="form-label">Attach Image</label>
+                            <label className="form-label" style={{float:'left',padding:"20px"}}>Attach Image
                             <FileBase64
                                 type="file" required
                                 multiple={false}
                                 onDone={({ base64 }) => setItem({ ...item, image: base64 })}
-                            />
+                            /></label>
                              <br/><br/>
-                            <label className="form-label">Description:</label>
-                            <textarea type="text" row="5" className="form-label" placeholder='main Ingredients'
-                                onChange={e => setItem({ ...item, desc: e.target.value })}
-                            />
-                             <br/>
-                            <label className="form-label">Product Price:</label>
-                            <input type="text" placeholder='in Rupees' required
-                                onChange={e => setItem({ ...item, price: e.target.value })}
-                            />
+                             <div>
+                            <label className="form-label" style={{float:'left',padding:"20px"}}>Description:
                             <br/>
-                            <button className="card__btn" onClick={successNotify}>SUBMIT</button>
+                            <input type="text"  className="form-label" placeholder='in grams...'
+                                onChange={e => setItem({ ...item, desc: e.target.value })}
+                            /></label>
+                            </div>
+                             <br/>
+                             <br/>
+                            
+                             <div style={{display:"block",alignItems:"center",justifyContent:"center"}} >
+                             <label>  <button className="card__btn" onClick={successNotify} >SUBMIT</button>
+                             </label>
+                            </div>
+                            
                             <ToastContainer />
                         </form>
                     </div>

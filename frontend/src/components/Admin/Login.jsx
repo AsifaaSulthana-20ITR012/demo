@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect, React } from "react";
 import axios from 'axios';
+import img1 from "../../images/login.jpg";
 import './login.css'
 function Login() {
     // React States
@@ -53,6 +54,8 @@ function Login() {
     // JSX code for login form
     const renderForm = (
         <div className="form">
+            
+            <h1 style={{textAlign:"center",padding:"5px"}}>LOGIN</h1>
             <form onSubmit={handleSubmit}>
                 <div className="input-container">
                     <label>Username </label>
@@ -72,7 +75,7 @@ function Login() {
     );
 
     return (
-        <div className="app">
+        <div className="app" id='login_id'>
             <div className="login-form">
                 {isSubmitted ? navigate('/admin') : renderForm}
             </div>

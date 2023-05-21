@@ -4,6 +4,7 @@ import Footer from "../HomePage/footer/Footer"
 
 const Contact = () => {
   return (
+    <div id='contactpage'>
     <div >
       <br/>
       <h1 className="Top_heading">Explore Our Branches</h1>
@@ -88,26 +89,28 @@ const Contact = () => {
         required 
         autoComplete='off' />
         </label>
-   
+        <label>  Email
         <input type="text" 
         name="email"
          placeholder='Email'
           required
            autoComplete='off'/>
-    
+          </label>
+          Feedback
         <textarea name='message' 
         placeholder="Enter your message" 
-         cols="30" rows="10"
+         cols="30" rows="5"
           required 
          autoComplete='off' >
          </textarea>
-        <input type="submit" value="submit"  style={{backgroundColor:"rgb(106, 39, 155)",color:"white",width:"150px",height:"40px",fontSize:"20px"}}/>
+        <input type="submit" value="submit" />
       </form>
     </div>
   </div>
   <br/>
   <br/>
 <Footer/>
+    </div>
     </div>
   )
 }

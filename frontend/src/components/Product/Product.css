@@ -100,9 +100,47 @@
     font-weight: bold;
     font-size: 1rem;
     margin: 1rem;
-    border: 2px solid rgb(55, 142, 189);
+    border: 0 njhupx solid rgb(20, 20, 20);
     background: transparent;
-    color: rgb(145, 145, 208);
+    color: rgb(254, 0, 13);
     border-radius:1rem;
+    background-color: rgba(236, 158, 57, 0.687);
     transition:  200ms ease-in, color 200ms ease-in;
   }  
+
+  #button-6 {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  #button-6 a {
+    position: relative;
+    transition: all .45s ease-Out;
+  }
+  
+  #spin {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    left: 70px;
+    top: 20px;
+    transform: rotate(0deg);
+    background: none;
+    position: absolute;
+    transition: all .5s ease-Out;
+  }
+  
+  #button-6:hover #spin {
+    width: 200%;
+    height: 500%;
+    opacity: 1;
+    left: -70px;
+    top: -70px;
+    background: #BFC0C0;
+    transform: rotate(80deg);
+  }
+  
+  #button-6:hover a {
+    color: #2D3142;
+  }

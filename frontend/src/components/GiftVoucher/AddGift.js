@@ -27,7 +27,9 @@ function AddGift() {
  
     return (
         <>
-        <div><h2>Add New Gift Products</h2>
+         <br/>
+        <br/>
+        <div><h2 style={{textAlign:"center",alignContent:"center"}}>Add New Gift Products</h2>
         <div className="create">   
                 <br/>
                 <div className=" col-7  formStyle" >
@@ -47,7 +49,7 @@ function AddGift() {
                             <br/><br/>
                             <label className="form-label">Description:</label>
                             <br/>
-                            <textarea  type="text" row="5"  placeholder='main Ingredients'
+                            <input  type="text" row="5"  placeholder='in grams...'
                                 onChange={e => setItem({ ...item, desc: e.target.value })}
                                 className="form-control"
                             />
