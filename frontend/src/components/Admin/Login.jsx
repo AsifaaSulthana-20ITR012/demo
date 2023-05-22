@@ -10,7 +10,7 @@ function Login() {
     const [isSubmitted, setIsSubmitted] = useState(false);
     useEffect(() => {
         axios
-            .get("http://localhost:5000/fetchUser")
+            .get("https://sanjays-fine-foods.onrender.com/fetchUser")
             .then((res) => setData(res.data))
             .catch((err) => console.log(err, "it has an error"));
     });

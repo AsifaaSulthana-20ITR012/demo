@@ -15,7 +15,7 @@ function Product() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/fetch")
+      .get("https://sanjays-fine-foods.onrender.com/fetch")
       .then((res) => setData(res.data))
       .catch((err) => console.log(err, "it has an error"));
   }, []); // add empty dependency array to run useEffect only once

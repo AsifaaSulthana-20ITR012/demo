@@ -17,7 +17,7 @@ function AddProduct() {
         console.log(item)
         axios({
             method: 'post',
-            url: 'http://localhost:5000/upload',
+            url: 'https://sanjays-fine-foods.onrender.com/upload',
             data: item //formData
         })
         this.setState({ foodName: '', image: '', desc: '', price: '' })

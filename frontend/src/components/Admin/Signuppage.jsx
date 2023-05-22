@@ -22,7 +22,7 @@ function Signuppage() {
         console.log(item);
         axios({
             method: 'post',
-            url: 'http://localhost:5000/uploadSignup',
+            url: 'https://sanjays-fine-foods.onrender.com/uploadSignup',
             data: item //formData
         })
     }
