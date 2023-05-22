@@ -12,10 +12,10 @@ function AddProduct() {
         toast.success("Successfully Submitted!");
         this.setState({ foodName: '', image: '', desc: '', price: '' })
     }
-    const handleFormSubmit = (event) => {
+    const handleFormSubmit = async(event) => {
         // event.preventDefault();
         console.log(item)
-        axios({
+        await axios({
             method: 'post',
             url: 'https://sanjays-fine-foods.onrender.com/upload',
             data: item //formData
