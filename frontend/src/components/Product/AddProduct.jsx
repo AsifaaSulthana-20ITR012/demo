@@ -15,11 +15,12 @@ function AddProduct() {
     const handleFormSubmit = async(event) => {
         // event.preventDefault();
         console.log(item)
-        await axios({
-            method: 'post',
-            url: 'https://sanjays-fine-foods.onrender.com/upload',
-            data: item //formData
-        })
+        try {
+            const {data}=await axios.post('https://sanjays-fine-foods.onrender.com/upload',item)
+            console.log(data)
+        } catch (error) {
+            console.log(error.message)
+        }
         this.setState({ foodName: '', image: '', desc: '', price: '' })
     }
 

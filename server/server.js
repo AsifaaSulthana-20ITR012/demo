@@ -22,7 +22,6 @@ mongoose.connect("mongodb+srv://ASIFAA:asifaa@cluster0.nefz76b.mongodb.net/fine_
 
 app.post("/upload", async(req, res) => {
   // res.send(req.file);
-  console.log(req.body) 
   try {
     const saveImage =new  ImageModell({
       foodName: req.body.foodName,
@@ -31,6 +30,7 @@ app.post("/upload", async(req, res) => {
       price: req.body.price
     });
     await saveImage.save()
+
     res.status(200).json({message:"Success"})
     
   } catch (error) {
@@ -60,8 +60,8 @@ app.post("/uploadGift",async (req, res) => {
 
 // fetching products
 app.get('/fetch', async (req, res) => {
-  const allData = await ImageModell.find()
-  res.json(allData)
+  const allData = await ImageModell.find({})
+  res.status(200).json(allData)
 })
 app.get('/fetchGift', async (req, res) => {
   const allData = await GiftModel.find()
