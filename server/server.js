@@ -17,17 +17,18 @@ app.use(bodyParser.json({limit:"50mb"}));
 //connect to mongoose
 // mongoose.connect("mongodb+srv://fahima:passpass@cluster0.oz07pn2.mongodb.net/foodda")
 mongoose.connect("mongodb+srv://ASIFAA:asifaa@cluster0.nefz76b.mongodb.net/fine_foods")
+.then(()=>console.log("connected"))
+.catch(err=>console.log(err.message))
 
-app.post("/upload", (req, res) => {
+app.post("/upload", async(req, res) => {
   // res.send(req.file); 
-  const saveImage = ImageModell({
+  const saveImage =new  ImageModell({
     foodName: req.body.foodName,
     image: req.body.image,
     desc: req.body.desc,
     price: req.body.price
   });
-  saveImage
-    .save()
+  await saveImage.save()
     .then((res) => {
       console.log("Products added to db");
     })
@@ -38,16 +39,15 @@ app.post("/upload", (req, res) => {
 });
 
 // adding gift
-app.post("/uploadGift", (req, res) => {
+app.post("/uploadGift",async (req, res) => {
   // res.send(req.file); 
-  const saveGift = GiftModel({
+  const saveGift = new GiftModel({
     foodName: req.body.foodName,
     image: req.body.image,
     desc: req.body.desc,
     price: req.body.price
   });
-  saveGift
-    .save()
+  await saveGift.save()
     .then((res) => {
       console.log("gifts added to db");
     })
@@ -72,14 +72,14 @@ app.get('/fetchUser', async (req, res) => {
   res.json(allData)
 })
 
-app.post("/uploadSignup", (req, res) => {
-  const saveSignupData = UserModel({
+app.post("/uploadSignup", async(req, res) => {
+  const saveSignupData =new UserModel({
     name: req.body.name,
     uname: req.body.uname,
     email: req.body.email,
     password: req.body.password
   });
-  saveSignupData
+  await saveSignupData
     .save()
     .then((res) => {
       console.log("Signup Data is saved");
