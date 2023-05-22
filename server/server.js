@@ -21,21 +21,22 @@ mongoose.connect("mongodb+srv://ASIFAA:asifaa@cluster0.nefz76b.mongodb.net/fine_
 .catch(err=>console.log(err.message))
 
 app.post("/upload", async(req, res) => {
-  // res.send(req.file); 
-  const saveImage =new  ImageModell({
-    foodName: req.body.foodName,
-    image: req.body.image,
-    desc: req.body.desc,
-    price: req.body.price
-  });
-  await saveImage.save()
-    .then((res) => {
-      console.log("Products added to db");
-    })
-    .catch((err) => {
-      console.log(err, "Error!!! Try again");
+  // res.send(req.file);
+  console.log(req.body) 
+  try {
+    const saveImage =new  ImageModell({
+      foodName: req.body.foodName,
+      image: req.body.image,
+      desc: req.body.desc,
+      price: req.body.price
     });
-  res.send('Image saved success')
+    await saveImage.save()
+    res.status(200).json({message:"Success"})
+    
+  } catch (error) {
+      res.status(500).send(error.message)
+  }
+   
 });
 
 // adding gift
